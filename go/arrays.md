@@ -1,20 +1,21 @@
 # Arrays
 
-## Declaration
+Arrays are too rigid for common use. The length of the array is part of it's type. Therefore `[2]int` and `[3]int` aren't the same type and there is not type conversion between the two.
+
+Arrays are good when you know the size in advance. Using them will optimize memory allocation and stuff.
 
 ```go
-// zero-value array
-var x [3]int
+var x [3]int // zero array
+fmt.Println(x)
 
-// array literal
-var y = [3]int{10, 20, 30}
-var y = [...]rune{'a', 'b', 'c', 'd'}
+var y = [5]int{1, 2, 0, 0, 4} // array literal
+fmt.Println(y)
 
-// sparse array 
-var z  = [10]int{1, 5:4, 9:55} // [1 0 0 0 0 4 0 0 0 55]
+var y2 = [...]int{1, 3, 5, 6, 7, 8, 0} // don't need to specify the length when using an array literal
+fmt.Println(y2)
+
+var z = [5]int{1, 2, 4: 4} // sparse array. All 0 except the indexes specified
+fmt.Println(z)
+
+fmt.Println(y == z) // true
 ```
-
-## lengths
-
-[3]int and [4]int are two different types in go!!!
-
