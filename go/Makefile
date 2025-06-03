@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := build
 
-.PHONY:fmt vet build
+.PHONY:fmt vet build clean test
 fmt:
 	go fmt ./...
 
@@ -8,11 +8,11 @@ vet: fmt
 	go vet ./...
 
 build: vet
-	go build -o # binary file name
+	go build -o todo ./cmd/todo
 
 clean:
-	go clean # filepath for binary
-	# rm -f stuff
+	go clean
+	rm -f .todo.json ./todo
 
 test:
-	go test -v ./... # run all tests
+	go test -v ./...
