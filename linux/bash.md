@@ -8,3 +8,13 @@ String interpolation uses the $ prefix
 name="alex"
 echo $name
 ```
+
+
+## grep
+
+Search strings across one or many files.
+
+```bash
+# search across a single file
+
+```
