@@ -18,6 +18,12 @@ Search strings across one or many files.
 # search across a single file
 
 ```
-
-
 ## find
+
+```bash
+# search for an exact file name in a directory
+find some_directory -name hello.txt
+
+# search pattern match using wildcards
+find some_directory -name "*.txt"
+```
