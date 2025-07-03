@@ -15,3 +15,18 @@ default:
   fmt.Println("odd")
 }
 ```
+
+
+## Type switches
+```go
+switch v := i.(type) {
+case T:
+    // here v has type T
+case S:
+    // here v has type S
+default:
+    // no match; here v has the same type as i
+}
+```
+
+

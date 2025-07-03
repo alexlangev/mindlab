@@ -18,3 +18,6 @@ Search strings across one or many files.
 # search across a single file
 
 ```
+
+
+## find
