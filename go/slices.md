@@ -36,8 +36,26 @@ slices.Equal(x, y) // true
 ```
 
 
+## Variadic functions accepts an unlimited number of arguments 
+
+The `printStrings` function is variadic. Its last parameter has the spread operator "...". This means it accepts an unlimited number of strings. These are accessible through a slice inside the function body.
+```go
+func printStrings(strings ...string) {
+	for i := 0; i < len(strings); i++ {
+		fmt.Println(strings[i])
+	}
+}
+
+func main() {
+    names := []string{"bob", "sue", "alice"}
+    printStrings(names...)
+}
+```
+
+
 ## Append
 
+Append is variadic meaning it accepts an unlimited number or arguments.
 ```go
 var x = []int{1, 2, 3}
 x = append(x, 4)

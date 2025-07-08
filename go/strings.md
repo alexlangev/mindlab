@@ -1,5 +1,5 @@
 # Strings
-
+Go uses fstrings like in C. It's shit...
 
 %v prints the Go syntax representation of a value, it's a nice default.
 %s prints a string
